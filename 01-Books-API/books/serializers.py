@@ -18,13 +18,15 @@ class BookSerializer(serializers.ModelSerializer):
     Book serializer
     """
 
+    authors = AuthorSerializer(many=True, read_only=True)
+
     class Meta:
         model = Book
         fields = (
             "title",
             "description",
-            "edition",
             "authors",
+            "edition",
             "isbn",
             "publication_date",
         )
