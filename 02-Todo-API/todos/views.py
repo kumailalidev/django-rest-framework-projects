@@ -38,7 +38,7 @@ class TodoList(generics.ListCreateAPIView):
             queryset = queryset.filter(completed=completed)
 
         if sort_by == "date_updated":
-            queryset = queryset.order_by("date_updated")
+            queryset = queryset.order_by("-date_updated")
 
         serializer = self.get_serializer(queryset, many=True)
         return Response(serializer.data)
