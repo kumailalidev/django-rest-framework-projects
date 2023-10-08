@@ -6,8 +6,8 @@ A Books REST API is a web-based service that provides read-only access to a coll
 
 ## Endpoints
 
-| Endpoint            | Description                                                                                                                                           | Allowed HTTP Method |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| `api/`              | This endpoint allows users to retrieve a list of all available books.                                                                                 | GET                 |
-| `api/book/<int:pk>` | The API also provides a detailed view of individual books. Users can request specific book details by sending a GET request to the book's unique URL. | GET                 |
-| `api/authors/ `     | This endpoint allows users to retrieve a list of all authors.                                                                                         | GET                 |
+| Endpoint            | Description                                                                                                                                      | Allowed HTTP Method | Permissions |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------- | ----------- |
+| `api/`              | This endpoint allows users to retrieve a list of all available books.                                                                            | GET                 | Any         |
+| `api/book/<int:pk>` | The API provides a detailed view of individual books. Users can request specific book details by sending a GET request to the book's unique URL. | GET                 | Any         |
+| `api/authors/ `     | This endpoint allows users to retrieve a list of all authors.                                                                                    | GET                 | Any         |
